@@ -1,0 +1,20 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>EvgenyZubatov</groupId>
+  <artifactId>MLLab1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>MLLab1</name>
+  <description>ML class Lab1</description>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.apache.commons</groupId>
+  		<artifactId>commons-math3</artifactId>
+  		<version>3.6.1</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>nz.ac.waikato.cms.weka</groupId>
+  		<artifactId>weka-stable</artifactId>
+  		<version>3.6.13</version>
+  	</dependency>
+  </dependencies>
+</project>
