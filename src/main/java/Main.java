@@ -14,8 +14,6 @@ import weka.core.Instances;
 import weka.core.converters.ArffLoader;
 import weka.filters.Filter;
 import weka.filters.supervised.attribute.Discretize;
-//import weka.filters.unsupervised.attribute.Discretize;
-//import weka.filters.unsupervised.attribute.NumericToNominal;
 
 /*
  * Please replace ARFF_TEST_FILE_PATH and ARFF_TRAINING_FILE_PATH with path to training and test data
@@ -59,19 +57,6 @@ public class Main {
         	}
         }
         System.out.println("Accuracy on test data is: " + (double)hit*100/testInstances.numInstances() + "%");
-
-        System.out.println("Running ID3 on training data");
-
-        int hit2 = 0;
-        for(Enumeration<Instance> e = trainingInstances.enumerateInstances(); e.hasMoreElements();){
-        	Instance i = e.nextElement();
-        	double d = id3.classifyInstance(i);
-        	String c = id3.convertClassValueToString(testInstances.classAttribute(), d);
-        	if (d == i.classValue()) {
-        		hit2++;
-        	}
-        }
-        System.out.println("Accuracy on training data is: " + (double)hit2*100/trainingInstances.numInstances() + "%");
     }
     
     private static Instances LoadFile(String path, String arffPath) throws Exception {
