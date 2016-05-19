@@ -13,6 +13,8 @@ public class BaggedClassifier<T extends Classifier> extends Classifier {
 
 	/** for serialization */
 	static final long serialVersionUID = -2693678647096322562L;
+	
+	static final boolean useRandomSeed = false;
 
 	private List<T> m_forrest;
 	private Class<T> m_classFactory;
@@ -57,7 +59,9 @@ public class BaggedClassifier<T extends Classifier> extends Classifier {
 			
 			if (i != 0) {
 				newDataSet = new Instances(data, data.numInstances());
-				ShuffleData(data, newDataSet, rnd.nextLong());
+				
+				long seed = useRandomSeed ? rnd.nextLong() : i;
+				ShuffleData(data, newDataSet, seed);
 			}
 			
 			T c = m_classFactory.newInstance();

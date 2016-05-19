@@ -16,8 +16,7 @@ import weka.filters.Filter;
 import weka.filters.supervised.attribute.Discretize;
 
 /*
- * Please replace ARFF_TEST_FILE_PATH and ARFF_TRAINING_FILE_PATH with path to training and test data
- * Please replace CONFIDENCE with required confidence level (ex 0.99 for 99%)
+ * Please replace ROOT with path to the folder with training and test data
  * */
 public class Main {
 
@@ -29,7 +28,7 @@ public class Main {
     private static final String ARFF_TEST_FILE_PATH = TEST_FILE_PATH + ".arff";
     private static final String ARFF_TRAINING_FILE_PATH = TRAINING_FILE_PATH + ".arff";
     
-    private static int SamplingCount = 1; 
+    private static int SamplingCount = 5; 
     private static Discretize filter = null;
 	
     public static void main(String[] args) throws Exception {
